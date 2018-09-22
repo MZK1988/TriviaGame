@@ -14,7 +14,7 @@ function run() {
 
 function decrement() {
     number--;
-    $("#timer").html("<strong>" +"Time Left:" + number + "</strong>")
+    $("#timer").html("<strong>" +"Time Left: " + number + "</strong>")
     if (number === 0) {
         stop();
         alert("Your time is up");
