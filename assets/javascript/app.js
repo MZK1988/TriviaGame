@@ -61,14 +61,29 @@ $(document).ready(function () {
     $("#doneButton").on("click", function() {
         $("#hideTwo").hide();
         $("#hideThree").show();
-        var answer1 = $("input[type='radio'][name='questionOne']:checked").val();
-        var answer2 = $("input[type='radio'][name='questionTwo']:checked").val();
-        var answer3 = $("input[type='radio'][name='questionThree']:checked").val();
-        var answer4 = $("input[type='radio'][name='questionFour']:checked").val();
-        var answer5 = $("input[type='radio'][name='questionFive']:checked").val();
+        var guess1 = $("input[type='radio'][name='questionOne']:checked").val();
+        var guess2 = $("input[type='radio'][name='questionTwo']:checked").val();
+        var guess3 = $("input[type='radio'][name='questionThree']:checked").val();
+        var guess4 = $("input[type='radio'][name='questionFour']:checked").val();
+        var guess5 = $("input[type='radio'][name='questionFive']:checked").val();
+
+        var correctAnswers = 0;
+        var incorrectAnswers = 0;
+        var unanswered = 0;
+
+        var answer1 = $("#1a").val();
+        var answer2 = $("#2a").val();
 
 
-        console.log(answer1, answer2, answer3, answer4, answer5);
+
+        var guesses = [guess1, guess2, guess3, guess4, guess5]
+
+        
+
+        console.log(answer1);
+
+
+        
 
 
 
