@@ -62,7 +62,13 @@ $(document).ready(function () {
         $("#hideTwo").hide();
         $("#hideThree").show();
         var answer1 = $("input[type='radio'][name='questionOne']:checked").val();
-        console.log(answer1);
+        var answer2 = $("input[type='radio'][name='questionTwo']:checked").val();
+        var answer3 = $("input[type='radio'][name='questionThree']:checked").val();
+        var answer4 = $("input[type='radio'][name='questionFour']:checked").val();
+        var answer5 = $("input[type='radio'][name='questionFive']:checked").val();
+
+
+        console.log(answer1, answer2, answer3, answer4, answer5);
 
 
 
