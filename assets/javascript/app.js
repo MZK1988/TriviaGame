@@ -26,12 +26,13 @@
 
 $(document).ready(function () {
     $("#hideTwo").hide();
+    $("#hideThree").hide();
+
     $("#startButton").on("click", function () {
         $("#hideOne").hide();
         $("#hideTwo").show();
         var number = 120;
         var intervalID;
-        console.log(number);
         function run() {
             clearInterval(intervalID);
             intervalID = setInterval(decrement, 1000);
@@ -42,7 +43,8 @@ $(document).ready(function () {
             $("#timer").html("<strong>" + "Time Left: " + number + "</strong>")
             if (number === 0) {
                 stop();
-                alert("Your time is up");
+                $("#hideTwo").hide();
+                $("#hideThree").show();
             }
         }
 
@@ -52,10 +54,19 @@ $(document).ready(function () {
 
         run();
 
-        
+
 
     })
 
+    $("#doneButton").on("click", function() {
+        $("#hideTwo").hide();
+        $("#hideThree").show();
+        var answer1 = $("input[type='radio'][name='questionOne']:checked").val();
+        console.log(answer1);
+
+
+
+    })
 
 
 });

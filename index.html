@@ -30,7 +30,7 @@
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Click Start to Begin the Trivia Game!</h5>
-                        <p class="card-text">You will have to answer all the questions in the game.</p>
+                        <p class="card-text">You will have to answer all the questions in the game in two minutes or 120 seconds.</p>
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <div>
@@ -56,51 +56,51 @@
                             <p>1. How many miles are in an astronomical unit?</p>
                             <div>
                                 <form>
-                                    <input class="questionOne" type="radio" name="gender" value="male" checked> 93 million
+                                    <input id="1a" type="radio" name="questionOne" value="93 million" checked> 93 million
                                     <br>
-                                    <input class="questionOne" type="radio" name="gender" value="female"> 50 million
+                                    <input id="1b" type="radio" name="questionOne" value="50 million"> 50 million
                                     <br>
-                                    <input class="questionOne" type="radio" name="gender" value="other"> 930 thousand
+                                    <input id="1c" type="radio" name="questionOne" value="930 thousand"> 930 thousand
                                 </form>
                             </div>
                             <p>2. How many planets are in our solar system?</p>
                             <div>
                                 <form>
-                                    <input class="questionTwo" type="radio" name="gender" value="male" checked> 8 planets
+                                    <input id ="2a" type="radio" name="questionTwo" value="8 planets" checked> 8 planets
                                     <br>
-                                    <input class="questionTwo" type="radio" name="gender" value="female"> 9 planets
+                                    <input id="2b" type="radio" name="questionTwo" value="9 planets"> 9 planets
                                     <br>
-                                    <input class="questionTwo" type="radio" name="gender" value="other"> 7 planets
+                                    <input id="2c" type="radio" name="questionTwo" value="7 planets"> 7 planets
                                 </form>
                             </div>
                             <p>3. How many solar systems are in the milky way?</p>
                             <div>
                                 <form>
-                                    <input class="questionThree" type="radio" name="gender" value="male" checked> 50 million
+                                    <input id="3a" type="radio" name="questionThree" value="50 million" checked> 50 million
                                     <br>
-                                    <input class="questionThree" type="radio" name="gender" value="female"> 100 million
+                                    <input id="3b" type="radio" name="questionThree" value="100 million"> 100 million
                                     <br>
-                                    <input class="questionThree" type="radio" name="gender" value="other"> 100 billion
+                                    <input id="3c"  type="radio" name="questionThree" value="100 billion"> 100 billion
                                 </form>
                             </div>
                             <p>4. What is the capital city of Texas?</p>
                             <div>
                                 <form>
-                                    <input class="questionFour" type="radio" name="gender" value="male" checked> Austin
+                                    <input id="4a"  type="radio" name="questionFour" value="Austin" checked> Austin
                                     <br>
-                                    <input class="questionFour" type="radio" name="gender" value="female"> Dallas
+                                    <input id="4b"  type="radio" name="questionFour" value="Dallas"> Dallas
                                     <br>
-                                    <input class="questionFour" type="radio" name="gender" value="other"> Houston
+                                    <input id="4c"  type="radio" name="questionFour" value="Houston"> Houston
                                 </form>
                             </div>
                             <p>5. What is the capital city of France?</p>
                             <div>
                                 <form>
-                                    <input class="questionFive" type="radio" name="gender" value="male" checked> Paris
+                                    <input id="5a"  type="radio" name="questionFive" value="Paris" checked> Paris
                                     <br>
-                                    <input class="questionFive" type="radio" name="gender" value="female"> Nice
+                                    <input id="5b"  type="radio" name="questionFive" value="Nice"> Nice
                                     <br>
-                                    <input class="questionFive" type="radio" name="gender" value="other"> Cannes
+                                    <input id="5c"  type="radio" name="questionFive" value="Cannes"> Cannes
                                 </form>
                             </div>
                         </div>
@@ -109,13 +109,24 @@
                 </div>
             </div>
         </div>
-        <br>
-        <br>
-    </div>
-    <script>
+        <div id="hideThree" class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h2><strong>Totally Trivial Trivia!</strong></h2>
+                    </div>
+                    <div class="card-body">
+                        <p id = "correctAnswers">Correct Answers: </p>
+                        <p id = "Incorrect Answers">Incorrect Answers: </p>
+                        <p id="unanswered">Unanswered: </p>
+                    </div>
+                </div>
+            </div>
+        </div><br><br>
+        <script>
 
 
-    </script>
+        </script>
 
 </body>
 
