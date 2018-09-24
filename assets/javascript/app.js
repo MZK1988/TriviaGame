@@ -45,6 +45,67 @@ $(document).ready(function () {
                 stop();
                 $("#hideTwo").hide();
                 $("#hideThree").show();
+                var guess1 = $("input[type='radio'][name='questionOne']:checked").val();
+                var guess2 = $("input[type='radio'][name='questionTwo']:checked").val();
+                var guess3 = $("input[type='radio'][name='questionThree']:checked").val();
+                var guess4 = $("input[type='radio'][name='questionFour']:checked").val();
+                var guess5 = $("input[type='radio'][name='questionFive']:checked").val();
+        
+                console.log(guess1, guess2, guess3, guess4, guess5)
+        
+                var correctAnswers = 0;
+                var incorrectAnswers = 0;
+                var unanswered = 0;
+        
+                var answer1 = $("#1a").val();
+                var answer2 = $("#2a").val();
+                var answer3 = $("#3c").val();
+                var answer4 = $("#4a").val();
+                var answer5 = $("#5a").val();
+        
+                var guesses = [guess1, guess2, guess3, guess4, guess5]
+        
+        
+                if (guess1 === answer1) {
+                    correctAnswers++
+                }
+                else if (guess1 != answer1) {
+                    incorrectAnswers++
+                }
+        
+                if (guess2 === answer2) {
+                    correctAnswers++;
+                } else if (guess2 != answer2) {
+                    incorrectAnswers++
+                }
+                if (guess3 === answer3) {
+                    correctAnswers++;
+                } else if (guess3 != answer3) {
+                    incorrectAnswers++
+                }
+        
+                if (guess4 === answer4) {
+                    correctAnswers++;
+                } else if (guess4 != answer4) {
+                    incorrectAnswers++
+                }
+        
+                if (guess5 === answer5) {
+                    correctAnswers++;
+                } else if (guess5 != answer5) {
+                    incorrectAnswers++
+                }
+        
+        
+                $("#correctAnswers").text("Correct Answers: " + correctAnswers);
+                $("#incorrectAnswers").text("Incorrect Answers: " + incorrectAnswers);
+                $("#unanswered").text("Unanswered: " + unanswered);
+                $("#allDone").text("All Done!");
+        
+                console.log(incorrectAnswers);
+        
+        
+
             }
         }
 
@@ -58,7 +119,7 @@ $(document).ready(function () {
 
     })
 
-    $("#doneButton").on("click", function() {
+    $("#doneButton").on("click", function () {
         $("#hideTwo").hide();
         $("#hideThree").show();
         var guess1 = $("input[type='radio'][name='questionOne']:checked").val();
@@ -67,23 +128,61 @@ $(document).ready(function () {
         var guess4 = $("input[type='radio'][name='questionFour']:checked").val();
         var guess5 = $("input[type='radio'][name='questionFive']:checked").val();
 
+        console.log(guess1, guess2, guess3, guess4, guess5)
+
         var correctAnswers = 0;
         var incorrectAnswers = 0;
         var unanswered = 0;
 
         var answer1 = $("#1a").val();
         var answer2 = $("#2a").val();
-
-
+        var answer3 = $("#3c").val();
+        var answer4 = $("#4a").val();
+        var answer5 = $("#5a").val();
 
         var guesses = [guess1, guess2, guess3, guess4, guess5]
 
-        
 
-        console.log(answer1);
+        if (guess1 === answer1) {
+            correctAnswers++
+        }
+        else if (guess1 != answer1) {
+            incorrectAnswers++
+        }
+
+        if (guess2 === answer2) {
+            correctAnswers++;
+        } else if (guess2 != answer2) {
+            incorrectAnswers++
+        }
+        if (guess3 === answer3) {
+            correctAnswers++;
+        } else if (guess3 != answer3) {
+            incorrectAnswers++
+        }
+
+        if (guess4 === answer4) {
+            correctAnswers++;
+        } else if (guess4 != answer4) {
+            incorrectAnswers++
+        }
+
+        if (guess5 === answer5) {
+            correctAnswers++;
+        } else if (guess5 != answer5) {
+            incorrectAnswers++
+        }
 
 
-        
+        $("#correctAnswers").text("Correct Answers: " + correctAnswers);
+        $("#incorrectAnswers").text("Incorrect Answers: " + incorrectAnswers);
+        $("#unanswered").text("Unanswered: " + unanswered);
+        $("#allDone").text("All Done!");
+
+        console.log(incorrectAnswers);
+
+
+
 
 
 
